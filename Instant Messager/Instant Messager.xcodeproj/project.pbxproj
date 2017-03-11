@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E02421BB1E7406CA002BE83E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BA1E7406CA002BE83E /* main.m */; };
+		E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BD1E7406CA002BE83E /* AppDelegate.m */; };
+		E02421C11E7406CA002BE83E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421C01E7406CA002BE83E /* ViewController.m */; };
+		E02421C41E7406CA002BE83E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02421C21E7406CA002BE83E /* Main.storyboard */; };
+		E02421C61E7406CB002BE83E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02421C51E7406CB002BE83E /* Assets.xcassets */; };
+		E02421C91E7406CB002BE83E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02421C71E7406CB002BE83E /* LaunchScreen.storyboard */; };
+		E02421D41E7406CB002BE83E /* Instant_MessagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421D31E7406CB002BE83E /* Instant_MessagerTests.m */; };
+		E02421DF1E7406CB002BE83E /* Instant_MessagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E02421D01E7406CB002BE83E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E02421AE1E7406CA002BE83E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E02421B51E7406CA002BE83E;
+			remoteInfo = "Instant Messager";
+		};
+		E02421DB1E7406CB002BE83E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E02421AE1E7406CA002BE83E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E02421B51E7406CA002BE83E;
+			remoteInfo = "Instant Messager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E02421B61E7406CA002BE83E /* Instant Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instant Messager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02421BA1E7406CA002BE83E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E02421BC1E7406CA002BE83E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E02421BD1E7406CA002BE83E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E02421BF1E7406CA002BE83E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E02421C01E7406CA002BE83E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E02421C31E7406CA002BE83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E02421C51E7406CB002BE83E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E02421C81E7406CB002BE83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E02421CA1E7406CB002BE83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E02421CF1E7406CB002BE83E /* Instant MessagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instant MessagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02421D31E7406CB002BE83E /* Instant_MessagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instant_MessagerTests.m; sourceTree = "<group>"; };
+		E02421D51E7406CB002BE83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E02421DA1E7406CB002BE83E /* Instant MessagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instant MessagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instant_MessagerUITests.m; sourceTree = "<group>"; };
+		E02421E01E7406CB002BE83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E02421B31E7406CA002BE83E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02421CC1E7406CB002BE83E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02421D71E7406CB002BE83E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E02421AD1E7406CA002BE83E = {
+			isa = PBXGroup;
+			children = (
+				E02421B81E7406CA002BE83E /* Instant Messager */,
+				E02421D21E7406CB002BE83E /* Instant MessagerTests */,
+				E02421DD1E7406CB002BE83E /* Instant MessagerUITests */,
+				E02421B71E7406CA002BE83E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E02421B71E7406CA002BE83E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E02421B61E7406CA002BE83E /* Instant Messager.app */,
+				E02421CF1E7406CB002BE83E /* Instant MessagerTests.xctest */,
+				E02421DA1E7406CB002BE83E /* Instant MessagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E02421B81E7406CA002BE83E /* Instant Messager */ = {
+			isa = PBXGroup;
+			children = (
+				E02421EC1E7406DB002BE83E /* 1 Model */,
+				E02421ED1E7406E3002BE83E /* 2 View */,
+				E02421EE1E7406F0002BE83E /* 3 Controller */,
+				E02421EF1E7406F6002BE83E /* 4 Resource */,
+				E02421F01E7406FC002BE83E /* 5 Framework */,
+				E02421C21E7406CA002BE83E /* Main.storyboard */,
+				E02421C51E7406CB002BE83E /* Assets.xcassets */,
+				E02421C71E7406CB002BE83E /* LaunchScreen.storyboard */,
+				E02421CA1E7406CB002BE83E /* Info.plist */,
+				E02421B91E7406CA002BE83E /* Supporting Files */,
+			);
+			path = "Instant Messager";
+			sourceTree = "<group>";
+		};
+		E02421B91E7406CA002BE83E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E02421BA1E7406CA002BE83E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E02421D21E7406CB002BE83E /* Instant MessagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E02421D31E7406CB002BE83E /* Instant_MessagerTests.m */,
+				E02421D51E7406CB002BE83E /* Info.plist */,
+			);
+			path = "Instant MessagerTests";
+			sourceTree = "<group>";
+		};
+		E02421DD1E7406CB002BE83E /* Instant MessagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */,
+				E02421E01E7406CB002BE83E /* Info.plist */,
+			);
+			path = "Instant MessagerUITests";
+			sourceTree = "<group>";
+		};
+		E02421EC1E7406DB002BE83E /* 1 Model */ = {
+			isa = PBXGroup;
+			children = (
+				E02421BC1E7406CA002BE83E /* AppDelegate.h */,
+				E02421BD1E7406CA002BE83E /* AppDelegate.m */,
+			);
+			name = "1 Model";
+			sourceTree = "<group>";
+		};
+		E02421ED1E7406E3002BE83E /* 2 View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "2 View";
+			sourceTree = "<group>";
+		};
+		E02421EE1E7406F0002BE83E /* 3 Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E02421BF1E7406CA002BE83E /* ViewController.h */,
+				E02421C01E7406CA002BE83E /* ViewController.m */,
+			);
+			name = "3 Controller";
+			sourceTree = "<group>";
+		};
+		E02421EF1E7406F6002BE83E /* 4 Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "4 Resource";
+			sourceTree = "<group>";
+		};
+		E02421F01E7406FC002BE83E /* 5 Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "5 Framework";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E02421B51E7406CA002BE83E /* Instant Messager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E02421E31E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant Messager" */;
+			buildPhases = (
+				E02421B21E7406CA002BE83E /* Sources */,
+				E02421B31E7406CA002BE83E /* Frameworks */,
+				E02421B41E7406CA002BE83E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Instant Messager";
+			productName = "Instant Messager";
+			productReference = E02421B61E7406CA002BE83E /* Instant Messager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E02421CE1E7406CB002BE83E /* Instant MessagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E02421E61E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant MessagerTests" */;
+			buildPhases = (
+				E02421CB1E7406CB002BE83E /* Sources */,
+				E02421CC1E7406CB002BE83E /* Frameworks */,
+				E02421CD1E7406CB002BE83E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E02421D11E7406CB002BE83E /* PBXTargetDependency */,
+			);
+			name = "Instant MessagerTests";
+			productName = "Instant MessagerTests";
+			productReference = E02421CF1E7406CB002BE83E /* Instant MessagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E02421D91E7406CB002BE83E /* Instant MessagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E02421E91E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant MessagerUITests" */;
+			buildPhases = (
+				E02421D61E7406CB002BE83E /* Sources */,
+				E02421D71E7406CB002BE83E /* Frameworks */,
+				E02421D81E7406CB002BE83E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E02421DC1E7406CB002BE83E /* PBXTargetDependency */,
+			);
+			name = "Instant MessagerUITests";
+			productName = "Instant MessagerUITests";
+			productReference = E02421DA1E7406CB002BE83E /* Instant MessagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E02421AE1E7406CA002BE83E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					E02421B51E7406CA002BE83E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					E02421CE1E7406CB002BE83E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E02421B51E7406CA002BE83E;
+					};
+					E02421D91E7406CB002BE83E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E02421B51E7406CA002BE83E;
+					};
+				};
+			};
+			buildConfigurationList = E02421B11E7406CA002BE83E /* Build configuration list for PBXProject "Instant Messager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E02421AD1E7406CA002BE83E;
+			productRefGroup = E02421B71E7406CA002BE83E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E02421B51E7406CA002BE83E /* Instant Messager */,
+				E02421CE1E7406CB002BE83E /* Instant MessagerTests */,
+				E02421D91E7406CB002BE83E /* Instant MessagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E02421B41E7406CA002BE83E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02421C91E7406CB002BE83E /* LaunchScreen.storyboard in Resources */,
+				E02421C61E7406CB002BE83E /* Assets.xcassets in Resources */,
+				E02421C41E7406CA002BE83E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02421CD1E7406CB002BE83E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02421D81E7406CB002BE83E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E02421B21E7406CA002BE83E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02421C11E7406CA002BE83E /* ViewController.m in Sources */,
+				E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */,
+				E02421BB1E7406CA002BE83E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02421CB1E7406CB002BE83E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02421D41E7406CB002BE83E /* Instant_MessagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02421D61E7406CB002BE83E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02421DF1E7406CB002BE83E /* Instant_MessagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E02421D11E7406CB002BE83E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E02421B51E7406CA002BE83E /* Instant Messager */;
+			targetProxy = E02421D01E7406CB002BE83E /* PBXContainerItemProxy */;
+		};
+		E02421DC1E7406CB002BE83E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E02421B51E7406CA002BE83E /* Instant Messager */;
+			targetProxy = E02421DB1E7406CB002BE83E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E02421C21E7406CA002BE83E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E02421C31E7406CA002BE83E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E02421C71E7406CB002BE83E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E02421C81E7406CB002BE83E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E02421E11E7406CB002BE83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E02421E21E7406CB002BE83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E02421E41E7406CB002BE83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Instant Messager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-Messager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E02421E51E7406CB002BE83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Instant Messager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-Messager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E02421E71E7406CB002BE83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Instant MessagerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-MessagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instant Messager.app/Instant Messager";
+			};
+			name = Debug;
+		};
+		E02421E81E7406CB002BE83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Instant MessagerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-MessagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instant Messager.app/Instant Messager";
+			};
+			name = Release;
+		};
+		E02421EA1E7406CB002BE83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Instant MessagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-MessagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Instant Messager";
+			};
+			name = Debug;
+		};
+		E02421EB1E7406CB002BE83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Instant MessagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-MessagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Instant Messager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E02421B11E7406CA002BE83E /* Build configuration list for PBXProject "Instant Messager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E02421E11E7406CB002BE83E /* Debug */,
+				E02421E21E7406CB002BE83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E02421E31E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant Messager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E02421E41E7406CB002BE83E /* Debug */,
+				E02421E51E7406CB002BE83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E02421E61E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant MessagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E02421E71E7406CB002BE83E /* Debug */,
+				E02421E81E7406CB002BE83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E02421E91E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant MessagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E02421EA1E7406CB002BE83E /* Debug */,
+				E02421EB1E7406CB002BE83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E02421AE1E7406CA002BE83E /* Project object */;
+}
