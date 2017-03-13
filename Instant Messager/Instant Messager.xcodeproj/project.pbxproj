@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		E02421BB1E7406CA002BE83E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BA1E7406CA002BE83E /* main.m */; };
 		E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BD1E7406CA002BE83E /* AppDelegate.m */; };
-		E02421C11E7406CA002BE83E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421C01E7406CA002BE83E /* ViewController.m */; };
 		E02421C41E7406CA002BE83E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02421C21E7406CA002BE83E /* Main.storyboard */; };
 		E02421C61E7406CB002BE83E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02421C51E7406CB002BE83E /* Assets.xcassets */; };
 		E02421C91E7406CB002BE83E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02421C71E7406CB002BE83E /* LaunchScreen.storyboard */; };
 		E02421D41E7406CB002BE83E /* Instant_MessagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421D31E7406CB002BE83E /* Instant_MessagerTests.m */; };
 		E02421DF1E7406CB002BE83E /* Instant_MessagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */; };
+		E0E5679F1E76A4FD001FD9F1 /* secure_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */; };
+		E0E567A21E76A534001FD9F1 /* secure_chat_w.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E567A11E76A534001FD9F1 /* secure_chat_w.png */; };
+		E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E567A41E76A66B001FD9F1 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		E02421BA1E7406CA002BE83E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E02421BC1E7406CA002BE83E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E02421BD1E7406CA002BE83E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E02421BF1E7406CA002BE83E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E02421C01E7406CA002BE83E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E02421C31E7406CA002BE83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E02421C51E7406CB002BE83E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E02421C81E7406CB002BE83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,10 @@
 		E02421DA1E7406CB002BE83E /* Instant MessagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instant MessagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instant_MessagerUITests.m; sourceTree = "<group>"; };
 		E02421E01E7406CB002BE83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat.png; sourceTree = "<group>"; };
+		E0E567A11E76A534001FD9F1 /* secure_chat_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat_w.png; sourceTree = "<group>"; };
+		E0E567A31E76A66B001FD9F1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E0E567A41E76A66B001FD9F1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +164,8 @@
 		E02421EE1E7406F0002BE83E /* 3 Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E02421BF1E7406CA002BE83E /* ViewController.h */,
-				E02421C01E7406CA002BE83E /* ViewController.m */,
+				E0E567A31E76A66B001FD9F1 /* LoginViewController.h */,
+				E0E567A41E76A66B001FD9F1 /* LoginViewController.m */,
 			);
 			name = "3 Controller";
 			sourceTree = "<group>";
@@ -169,6 +173,7 @@
 		E02421EF1E7406F6002BE83E /* 4 Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E0E567A01E76A500001FD9F1 /* Image */,
 			);
 			name = "4 Resource";
 			sourceTree = "<group>";
@@ -178,6 +183,15 @@
 			children = (
 			);
 			name = "5 Framework";
+			sourceTree = "<group>";
+		};
+		E0E567A01E76A500001FD9F1 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */,
+				E0E567A11E76A534001FD9F1 /* secure_chat_w.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E5679F1E76A4FD001FD9F1 /* secure_chat.png in Resources */,
+				E0E567A21E76A534001FD9F1 /* secure_chat_w.png in Resources */,
 				E02421C91E7406CB002BE83E /* LaunchScreen.storyboard in Resources */,
 				E02421C61E7406CB002BE83E /* Assets.xcassets in Resources */,
 				E02421C41E7406CA002BE83E /* Main.storyboard in Resources */,
@@ -312,9 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E02421C11E7406CA002BE83E /* ViewController.m in Sources */,
 				E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */,
 				E02421BB1E7406CA002BE83E /* main.m in Sources */,
+				E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +562,7 @@
 				E02421E51E7406CB002BE83E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E02421E61E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant MessagerTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +571,7 @@
 				E02421E81E7406CB002BE83E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E02421E91E7406CB002BE83E /* Build configuration list for PBXNativeTarget "Instant MessagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +580,7 @@
 				E02421EB1E7406CB002BE83E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
