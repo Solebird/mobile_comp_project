@@ -22,6 +22,14 @@
     [super viewDidLoad];
     
     isReal = true;
+    [self initUI];
+}
+
+-(void)initUI{
+    [self.lbTitle setText:@"Real Password"];
+    [self.lbDesc setText:@"This password is required for viewing all the conversations, including secret conversations.\nYou may change it later in Setting."];
+    [self.tfPassword setPlaceholder:@"Real Password"];
+    [self.tfPassword setText:@""];
 }
 
 - (IBAction)onClickEnter:(id)sender {
@@ -33,7 +41,6 @@
         [self goToFriendList];
     }
 }
-
 -(void)goToFake{
     isReal = false;
     [self.tfPassword resignFirstResponder];
@@ -45,7 +52,7 @@
     } completion:^(BOOL finished) {
         
         [self.lbTitle setText:@"Fake Password"];
-        [self.lbDesc setText:@"Entering this password can only view those conversations which have not been locked. You may change it later in Setting."];
+        [self.lbDesc setText:@"Entering this password can only view those conversations which have not been set as secret.\nYou may change it later in Setting."];
         [self.tfPassword setPlaceholder:@"Fake Password"];
         [self.tfPassword setText:@""];
         
@@ -75,11 +82,5 @@
         
     }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

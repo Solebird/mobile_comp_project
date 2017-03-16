@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SDSegmentedControl.h"
 
 @interface FriendListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet SDSegmentedControl *segmentControl;
+
 @end

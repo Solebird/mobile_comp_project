@@ -17,6 +17,10 @@
 		E02421DF1E7406CB002BE83E /* Instant_MessagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */; };
 		E02A06C51E7A4BA7005D2810 /* InitPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */; };
 		E02A06C81E7A4C19005D2810 /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02A06C71E7A4C19005D2810 /* FriendListViewController.m */; };
+		E0860EEF1E7A5D32001BE105 /* SDSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EEE1E7A5D32001BE105 /* SDSegmentedControl.m */; };
+		E0860EF11E7A5D44001BE105 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0860EF01E7A5D44001BE105 /* QuartzCore.framework */; };
+		E0860EF41E7A686C001BE105 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EF31E7A686C001BE105 /* AddFriendViewController.m */; };
+		E0860EF71E7A6E69001BE105 /* TCTable.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EF61E7A6E69001BE105 /* TCTable.m */; };
 		E0E5679F1E76A4FD001FD9F1 /* secure_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */; };
 		E0E567A21E76A534001FD9F1 /* secure_chat_w.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E567A11E76A534001FD9F1 /* secure_chat_w.png */; };
 		E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E567A41E76A66B001FD9F1 /* LoginViewController.m */; };
@@ -61,6 +65,13 @@
 		E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitPasswordViewController.m; sourceTree = "<group>"; };
 		E02A06C61E7A4C19005D2810 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
 		E02A06C71E7A4C19005D2810 /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
+		E0860EED1E7A5D32001BE105 /* SDSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSegmentedControl.h; sourceTree = "<group>"; };
+		E0860EEE1E7A5D32001BE105 /* SDSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSegmentedControl.m; sourceTree = "<group>"; };
+		E0860EF01E7A5D44001BE105 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E0860EF21E7A686C001BE105 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		E0860EF31E7A686C001BE105 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
+		E0860EF51E7A6E69001BE105 /* TCTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCTable.h; path = "../../../../Desktop/TCTable-master/TCTable.h"; sourceTree = "<group>"; };
+		E0860EF61E7A6E69001BE105 /* TCTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCTable.m; path = "../../../../Desktop/TCTable-master/TCTable.m"; sourceTree = "<group>"; };
 		E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat.png; sourceTree = "<group>"; };
 		E0E567A11E76A534001FD9F1 /* secure_chat_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat_w.png; sourceTree = "<group>"; };
 		E0E567A31E76A66B001FD9F1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -72,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0860EF11E7A5D44001BE105 /* QuartzCore.framework in Frameworks */,
 				B1F36662DFC4AA43896EBE33 /* libPods-Instant Messager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +108,7 @@
 		2E98578D55BA15BD5816F6A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0860EF01E7A5D44001BE105 /* QuartzCore.framework */,
 				6E9D48285BBE911A07E0A0FB /* libPods-Instant Messager.a */,
 			);
 			name = Frameworks;
@@ -191,6 +204,8 @@
 				E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */,
 				E02A06C61E7A4C19005D2810 /* FriendListViewController.h */,
 				E02A06C71E7A4C19005D2810 /* FriendListViewController.m */,
+				E0860EF21E7A686C001BE105 /* AddFriendViewController.h */,
+				E0860EF31E7A686C001BE105 /* AddFriendViewController.m */,
 			);
 			name = "3 Controller";
 			sourceTree = "<group>";
@@ -206,6 +221,10 @@
 		E02421F01E7406FC002BE83E /* 5 Framework */ = {
 			isa = PBXGroup;
 			children = (
+				E0860EF51E7A6E69001BE105 /* TCTable.h */,
+				E0860EF61E7A6E69001BE105 /* TCTable.m */,
+				E0860EED1E7A5D32001BE105 /* SDSegmentedControl.h */,
+				E0860EEE1E7A5D32001BE105 /* SDSegmentedControl.m */,
 			);
 			name = "5 Framework";
 			sourceTree = "<group>";
@@ -238,8 +257,8 @@
 				42E3349AB58CA286E63339EA /* [CP] Check Pods Manifest.lock */,
 				E02421B21E7406CA002BE83E /* Sources */,
 				E02421B31E7406CA002BE83E /* Frameworks */,
-				E02421B41E7406CA002BE83E /* Resources */,
 				0EB35B577C9EF318D721F673 /* [CP] Embed Pods Frameworks */,
+				E02421B41E7406CA002BE83E /* Resources */,
 				56E9F8756C94BFA90B1B1F6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -414,6 +433,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */,
+				E0860EEF1E7A5D32001BE105 /* SDSegmentedControl.m in Sources */,
+				E0860EF41E7A686C001BE105 /* AddFriendViewController.m in Sources */,
+				E0860EF71E7A6E69001BE105 /* TCTable.m in Sources */,
 				E02A06C81E7A4C19005D2810 /* FriendListViewController.m in Sources */,
 				E02A06C51E7A4BA7005D2810 /* InitPasswordViewController.m in Sources */,
 				E02421BB1E7406CA002BE83E /* main.m in Sources */,
