@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1F36662DFC4AA43896EBE33 /* libPods-Instant Messager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9D48285BBE911A07E0A0FB /* libPods-Instant Messager.a */; };
+		7EB209120A4ED2F9EF28F0CA /* libPods-Instant Messager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D71AD007F23C253D6D375BF /* libPods-Instant Messager.a */; };
 		E02421BB1E7406CA002BE83E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BA1E7406CA002BE83E /* main.m */; };
 		E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BD1E7406CA002BE83E /* AppDelegate.m */; };
 		E02421C41E7406CA002BE83E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02421C21E7406CA002BE83E /* Main.storyboard */; };
@@ -17,10 +17,12 @@
 		E02421DF1E7406CB002BE83E /* Instant_MessagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */; };
 		E02A06C51E7A4BA7005D2810 /* InitPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */; };
 		E02A06C81E7A4C19005D2810 /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02A06C71E7A4C19005D2810 /* FriendListViewController.m */; };
-		E0860EEF1E7A5D32001BE105 /* SDSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EEE1E7A5D32001BE105 /* SDSegmentedControl.m */; };
 		E0860EF11E7A5D44001BE105 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0860EF01E7A5D44001BE105 /* QuartzCore.framework */; };
 		E0860EF41E7A686C001BE105 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EF31E7A686C001BE105 /* AddFriendViewController.m */; };
-		E0860EF71E7A6E69001BE105 /* TCTable.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EF61E7A6E69001BE105 /* TCTable.m */; };
+		E0860EFA1E7A7689001BE105 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EF91E7A7689001BE105 /* ConversationViewController.m */; };
+		E0860EFD1E7A8BF2001BE105 /* TCTable.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EFC1E7A8BF2001BE105 /* TCTable.m */; };
+		E0860F001E7A8C1C001BE105 /* SDSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860EFF1E7A8C1C001BE105 /* SDSegmentedControl.m */; };
+		E0860F031E7A8C27001BE105 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0860F021E7A8C27001BE105 /* SwipeView.m */; };
 		E0E5679F1E76A4FD001FD9F1 /* secure_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */; };
 		E0E567A21E76A534001FD9F1 /* secure_chat_w.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E567A11E76A534001FD9F1 /* secure_chat_w.png */; };
 		E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E567A41E76A66B001FD9F1 /* LoginViewController.m */; };
@@ -45,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		3E4977F6409C7D88FD11150D /* Pods-Instant Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instant Messager.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instant Messager/Pods-Instant Messager.release.xcconfig"; sourceTree = "<group>"; };
-		6E9D48285BBE911A07E0A0FB /* libPods-Instant Messager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Instant Messager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D71AD007F23C253D6D375BF /* libPods-Instant Messager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Instant Messager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B93EDAA6C2B1DF3BA1321E3 /* Pods-Instant Messager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instant Messager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instant Messager/Pods-Instant Messager.debug.xcconfig"; sourceTree = "<group>"; };
 		E02421B61E7406CA002BE83E /* Instant Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instant Messager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02421BA1E7406CA002BE83E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,13 +67,17 @@
 		E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitPasswordViewController.m; sourceTree = "<group>"; };
 		E02A06C61E7A4C19005D2810 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
 		E02A06C71E7A4C19005D2810 /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
-		E0860EED1E7A5D32001BE105 /* SDSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSegmentedControl.h; sourceTree = "<group>"; };
-		E0860EEE1E7A5D32001BE105 /* SDSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSegmentedControl.m; sourceTree = "<group>"; };
 		E0860EF01E7A5D44001BE105 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E0860EF21E7A686C001BE105 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
 		E0860EF31E7A686C001BE105 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
-		E0860EF51E7A6E69001BE105 /* TCTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCTable.h; path = "../../../../Desktop/TCTable-master/TCTable.h"; sourceTree = "<group>"; };
-		E0860EF61E7A6E69001BE105 /* TCTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCTable.m; path = "../../../../Desktop/TCTable-master/TCTable.m"; sourceTree = "<group>"; };
+		E0860EF81E7A7689001BE105 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		E0860EF91E7A7689001BE105 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		E0860EFB1E7A8BF2001BE105 /* TCTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTable.h; sourceTree = "<group>"; };
+		E0860EFC1E7A8BF2001BE105 /* TCTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTable.m; sourceTree = "<group>"; };
+		E0860EFE1E7A8C1C001BE105 /* SDSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSegmentedControl.h; sourceTree = "<group>"; };
+		E0860EFF1E7A8C1C001BE105 /* SDSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSegmentedControl.m; sourceTree = "<group>"; };
+		E0860F011E7A8C27001BE105 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
+		E0860F021E7A8C27001BE105 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 		E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat.png; sourceTree = "<group>"; };
 		E0E567A11E76A534001FD9F1 /* secure_chat_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat_w.png; sourceTree = "<group>"; };
 		E0E567A31E76A66B001FD9F1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -84,7 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0860EF11E7A5D44001BE105 /* QuartzCore.framework in Frameworks */,
-				B1F36662DFC4AA43896EBE33 /* libPods-Instant Messager.a in Frameworks */,
+				7EB209120A4ED2F9EF28F0CA /* libPods-Instant Messager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				E0860EF01E7A5D44001BE105 /* QuartzCore.framework */,
-				6E9D48285BBE911A07E0A0FB /* libPods-Instant Messager.a */,
+				6D71AD007F23C253D6D375BF /* libPods-Instant Messager.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,6 +212,8 @@
 				E02A06C71E7A4C19005D2810 /* FriendListViewController.m */,
 				E0860EF21E7A686C001BE105 /* AddFriendViewController.h */,
 				E0860EF31E7A686C001BE105 /* AddFriendViewController.m */,
+				E0860EF81E7A7689001BE105 /* ConversationViewController.h */,
+				E0860EF91E7A7689001BE105 /* ConversationViewController.m */,
 			);
 			name = "3 Controller";
 			sourceTree = "<group>";
@@ -221,10 +229,12 @@
 		E02421F01E7406FC002BE83E /* 5 Framework */ = {
 			isa = PBXGroup;
 			children = (
-				E0860EF51E7A6E69001BE105 /* TCTable.h */,
-				E0860EF61E7A6E69001BE105 /* TCTable.m */,
-				E0860EED1E7A5D32001BE105 /* SDSegmentedControl.h */,
-				E0860EEE1E7A5D32001BE105 /* SDSegmentedControl.m */,
+				E0860EFB1E7A8BF2001BE105 /* TCTable.h */,
+				E0860EFC1E7A8BF2001BE105 /* TCTable.m */,
+				E0860EFE1E7A8C1C001BE105 /* SDSegmentedControl.h */,
+				E0860EFF1E7A8C1C001BE105 /* SDSegmentedControl.m */,
+				E0860F011E7A8C27001BE105 /* SwipeView.h */,
+				E0860F021E7A8C27001BE105 /* SwipeView.m */,
 			);
 			name = "5 Framework";
 			sourceTree = "<group>";
@@ -432,14 +442,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0860EFA1E7A7689001BE105 /* ConversationViewController.m in Sources */,
 				E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */,
-				E0860EEF1E7A5D32001BE105 /* SDSegmentedControl.m in Sources */,
 				E0860EF41E7A686C001BE105 /* AddFriendViewController.m in Sources */,
-				E0860EF71E7A6E69001BE105 /* TCTable.m in Sources */,
+				E0860EFD1E7A8BF2001BE105 /* TCTable.m in Sources */,
 				E02A06C81E7A4C19005D2810 /* FriendListViewController.m in Sources */,
 				E02A06C51E7A4BA7005D2810 /* InitPasswordViewController.m in Sources */,
 				E02421BB1E7406CA002BE83E /* main.m in Sources */,
+				E0860F001E7A8C1C001BE105 /* SDSegmentedControl.m in Sources */,
 				E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */,
+				E0860F031E7A8C27001BE105 /* SwipeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Instant Messager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-Messager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -602,6 +615,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Instant Messager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilecomp.Instant-Messager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
