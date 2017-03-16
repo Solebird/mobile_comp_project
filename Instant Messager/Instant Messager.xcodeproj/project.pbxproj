@@ -14,6 +14,8 @@
 		E02421C91E7406CB002BE83E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02421C71E7406CB002BE83E /* LaunchScreen.storyboard */; };
 		E02421D41E7406CB002BE83E /* Instant_MessagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421D31E7406CB002BE83E /* Instant_MessagerTests.m */; };
 		E02421DF1E7406CB002BE83E /* Instant_MessagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */; };
+		E02A06C51E7A4BA7005D2810 /* InitPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */; };
+		E02A06C81E7A4C19005D2810 /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02A06C71E7A4C19005D2810 /* FriendListViewController.m */; };
 		E0E5679F1E76A4FD001FD9F1 /* secure_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */; };
 		E0E567A21E76A534001FD9F1 /* secure_chat_w.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E567A11E76A534001FD9F1 /* secure_chat_w.png */; };
 		E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E567A41E76A66B001FD9F1 /* LoginViewController.m */; };
@@ -51,6 +53,10 @@
 		E02421DA1E7406CB002BE83E /* Instant MessagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instant MessagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02421DE1E7406CB002BE83E /* Instant_MessagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instant_MessagerUITests.m; sourceTree = "<group>"; };
 		E02421E01E7406CB002BE83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E02A06C31E7A4BA7005D2810 /* InitPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitPasswordViewController.h; sourceTree = "<group>"; };
+		E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitPasswordViewController.m; sourceTree = "<group>"; };
+		E02A06C61E7A4C19005D2810 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
+		E02A06C71E7A4C19005D2810 /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
 		E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat.png; sourceTree = "<group>"; };
 		E0E567A11E76A534001FD9F1 /* secure_chat_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_chat_w.png; sourceTree = "<group>"; };
 		E0E567A31E76A66B001FD9F1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -166,6 +172,10 @@
 			children = (
 				E0E567A31E76A66B001FD9F1 /* LoginViewController.h */,
 				E0E567A41E76A66B001FD9F1 /* LoginViewController.m */,
+				E02A06C31E7A4BA7005D2810 /* InitPasswordViewController.h */,
+				E02A06C41E7A4BA7005D2810 /* InitPasswordViewController.m */,
+				E02A06C61E7A4C19005D2810 /* FriendListViewController.h */,
+				E02A06C71E7A4C19005D2810 /* FriendListViewController.m */,
 			);
 			name = "3 Controller";
 			sourceTree = "<group>";
@@ -329,6 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */,
+				E02A06C81E7A4C19005D2810 /* FriendListViewController.m in Sources */,
+				E02A06C51E7A4BA7005D2810 /* InitPasswordViewController.m in Sources */,
 				E02421BB1E7406CA002BE83E /* main.m in Sources */,
 				E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */,
 			);

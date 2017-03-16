@@ -35,11 +35,13 @@
 }
 
 - (void)addBottomLineToTextField:(UITextField*)tf{
-    [tf setBorderStyle:UITextBorderStyleNone];
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.frame = CGRectMake(0.0f, tf.frame.size.height-1, tf.frame.size.width, 1.0f);
     bottomBorder.backgroundColor = [UIColor whiteColor].CGColor;
     [tf.layer addSublayer:bottomBorder];
+}
+
+- (IBAction)onClickLogin:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {
