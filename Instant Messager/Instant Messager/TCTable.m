@@ -35,7 +35,12 @@
     count++;
 }
 
--(NSMutableArray*)getRecord:(int)index{
+-(void)addEntireRecord:(NSMutableArray*)source_record{
+    [table insertObject:source_record atIndex:[table count]];
+    count++;
+}
+
+-(NSMutableArray*)getRecord:(long)index{
     if ([table count]>0)
         return [table objectAtIndex:index];
     return nil;

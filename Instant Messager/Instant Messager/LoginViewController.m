@@ -12,10 +12,14 @@
 
 @end
 
-@implementation LoginViewController
+@implementation LoginViewController{
+    bool needInitPassword;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    needInitPassword = false;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -42,6 +46,10 @@
 }
 
 - (IBAction)onClickLogin:(id)sender {
+    if (needInitPassword)
+        [self performSegueWithIdentifier:@"init_password" sender:self];
+    else
+        [self performSegueWithIdentifier:@"friend_list" sender:self];
 }
 
 @end

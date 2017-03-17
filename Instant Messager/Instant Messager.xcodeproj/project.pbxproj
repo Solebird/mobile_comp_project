@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7EB209120A4ED2F9EF28F0CA /* libPods-Instant Messager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D71AD007F23C253D6D375BF /* libPods-Instant Messager.a */; };
+		E021B52E1E7C114F00EDAAD4 /* KeyboardAvoiding.m in Sources */ = {isa = PBXBuildFile; fileRef = E021B52D1E7C114F00EDAAD4 /* KeyboardAvoiding.m */; };
+		E021B5361E7C2E0000EDAAD4 /* locked.png in Resources */ = {isa = PBXBuildFile; fileRef = E021B5351E7C2E0000EDAAD4 /* locked.png */; };
+		E021B5381E7C390E00EDAAD4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E021B5371E7C390E00EDAAD4 /* icon.png */; };
+		E021B53B1E7C3D5800EDAAD4 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = E021B53A1E7C3D5800EDAAD4 /* Global.m */; };
 		E02421BB1E7406CA002BE83E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BA1E7406CA002BE83E /* main.m */; };
 		E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E02421BD1E7406CA002BE83E /* AppDelegate.m */; };
 		E02421C41E7406CA002BE83E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02421C21E7406CA002BE83E /* Main.storyboard */; };
@@ -49,6 +53,12 @@
 		3E4977F6409C7D88FD11150D /* Pods-Instant Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instant Messager.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instant Messager/Pods-Instant Messager.release.xcconfig"; sourceTree = "<group>"; };
 		6D71AD007F23C253D6D375BF /* libPods-Instant Messager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Instant Messager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B93EDAA6C2B1DF3BA1321E3 /* Pods-Instant Messager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instant Messager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instant Messager/Pods-Instant Messager.debug.xcconfig"; sourceTree = "<group>"; };
+		E021B52C1E7C114F00EDAAD4 /* KeyboardAvoiding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardAvoiding.h; sourceTree = "<group>"; };
+		E021B52D1E7C114F00EDAAD4 /* KeyboardAvoiding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardAvoiding.m; sourceTree = "<group>"; };
+		E021B5351E7C2E0000EDAAD4 /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
+		E021B5371E7C390E00EDAAD4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E021B5391E7C3D5800EDAAD4 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		E021B53A1E7C3D5800EDAAD4 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		E02421B61E7406CA002BE83E /* Instant Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instant Messager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02421BA1E7406CA002BE83E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E02421BC1E7406CA002BE83E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +200,8 @@
 			children = (
 				E02421BC1E7406CA002BE83E /* AppDelegate.h */,
 				E02421BD1E7406CA002BE83E /* AppDelegate.m */,
+				E021B5391E7C3D5800EDAAD4 /* Global.h */,
+				E021B53A1E7C3D5800EDAAD4 /* Global.m */,
 			);
 			name = "1 Model";
 			sourceTree = "<group>";
@@ -229,6 +241,8 @@
 		E02421F01E7406FC002BE83E /* 5 Framework */ = {
 			isa = PBXGroup;
 			children = (
+				E021B52C1E7C114F00EDAAD4 /* KeyboardAvoiding.h */,
+				E021B52D1E7C114F00EDAAD4 /* KeyboardAvoiding.m */,
 				E0860EFB1E7A8BF2001BE105 /* TCTable.h */,
 				E0860EFC1E7A8BF2001BE105 /* TCTable.m */,
 				E0860EFE1E7A8C1C001BE105 /* SDSegmentedControl.h */,
@@ -242,6 +256,8 @@
 		E0E567A01E76A500001FD9F1 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				E021B5371E7C390E00EDAAD4 /* icon.png */,
+				E021B5351E7C2E0000EDAAD4 /* locked.png */,
 				E0E5679E1E76A4FD001FD9F1 /* secure_chat.png */,
 				E0E567A11E76A534001FD9F1 /* secure_chat_w.png */,
 			);
@@ -366,8 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E5679F1E76A4FD001FD9F1 /* secure_chat.png in Resources */,
+				E021B5381E7C390E00EDAAD4 /* icon.png in Resources */,
 				E0E567A21E76A534001FD9F1 /* secure_chat_w.png in Resources */,
 				E02421C91E7406CB002BE83E /* LaunchScreen.storyboard in Resources */,
+				E021B5361E7C2E0000EDAAD4 /* locked.png in Resources */,
 				E02421C61E7406CB002BE83E /* Assets.xcassets in Resources */,
 				E02421C41E7406CA002BE83E /* Main.storyboard in Resources */,
 			);
@@ -442,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E021B53B1E7C3D5800EDAAD4 /* Global.m in Sources */,
 				E0860EFA1E7A7689001BE105 /* ConversationViewController.m in Sources */,
 				E02421BE1E7406CA002BE83E /* AppDelegate.m in Sources */,
 				E0860EF41E7A686C001BE105 /* AddFriendViewController.m in Sources */,
@@ -452,6 +471,7 @@
 				E0860F001E7A8C1C001BE105 /* SDSegmentedControl.m in Sources */,
 				E0E567A51E76A66B001FD9F1 /* LoginViewController.m in Sources */,
 				E0860F031E7A8C27001BE105 /* SwipeView.m in Sources */,
+				E021B52E1E7C114F00EDAAD4 /* KeyboardAvoiding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,8 @@
 @property int count;
 
 -(void)addRecord:(id)obj,...;
--(NSMutableArray*)getRecord:(int)index;
+-(void)addEntireRecord:(NSMutableArray*)record;
+-(NSMutableArray*)getRecord:(long)index;
 -(void)updateField:(int)field fromRow:(int)row withObject:(id)obj;
 -(void)updateRecord:(int)row withObjects:(id)obj,... ;
 -(id)getObject:(int)col fromRow:(NSInteger)row;
