@@ -12,7 +12,9 @@
 
 @end
 
-@implementation ConversationViewController
+@implementation ConversationViewController{
+    NSDateFormatter *dateFormatter;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +34,5 @@
 - (IBAction)onClickMenu:(id)sender {
     
 }
-
 
 @end

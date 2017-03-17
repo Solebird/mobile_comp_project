@@ -1,21 +1,21 @@
 PODS:
-  - Atlas (1.0.30):
-    - LayerKit (>= 0.23.0)
-  - LayerKit (0.23.3)
+  - JSQMessagesViewController (7.3.4):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
 
 DEPENDENCIES:
-  - Atlas
+  - JSQMessagesViewController
   - Masonry
   - MBProgressHUD
 
 SPEC CHECKSUMS:
-  Atlas: 82ea2777b9bed19bc3704fd8b265af0301786d8c
-  LayerKit: 128b3b0c036422458d621f81f36e6b42d372feba
+  JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: 0fdf7b00d289207d33a78a2ff80d88092c347117
+PODFILE CHECKSUM: 56c29dac430bef359d49d52143739a4f5e06e634
 
 COCOAPODS: 1.0.1
