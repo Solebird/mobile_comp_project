@@ -12,9 +12,7 @@
 
 @end
 
-@implementation ConversationViewController{
-    NSDateFormatter *dateFormatter;
-}
+@implementation ConversationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

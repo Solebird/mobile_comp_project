@@ -72,8 +72,8 @@ const CGFloat kSDSegmentedControlScrollOffset = 20;
     return self;
 }
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib{
+    [super awakeFromNib];
     [self commonInit];
     _selectedSegmentIndex = super.selectedSegmentIndex;
     for (NSInteger i = 0; i < super.numberOfSegments; i++)
@@ -448,7 +448,7 @@ const CGFloat kSDSegmentedControlScrollOffset = 20;
 - (NSInteger)firstEnabledSegmentIndexNearIndex:(NSUInteger)index
 {
     // Select the first enabled segment
-    for (int i = index; i < self._items.count; i++)
+    for (long i = index; i < self._items.count; i++)
     {
         if (((SDSegmentView *)self._items[i]).enabled)
         {
@@ -456,7 +456,7 @@ const CGFloat kSDSegmentedControlScrollOffset = 20;
         }
     }
 
-    for (int i = index; i >= 0; i--)
+    for (long i = index; i >= 0; i--)
     {
         if (((SDSegmentView *)self._items[i]).enabled)
         {

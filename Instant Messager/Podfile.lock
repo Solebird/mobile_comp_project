@@ -1,21 +1,15 @@
 PODS:
-  - JSQMessagesViewController (7.3.4):
-    - JSQSystemSoundPlayer (~> 2.0.1)
-  - JSQSystemSoundPlayer (2.0.1)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
 
 DEPENDENCIES:
-  - JSQMessagesViewController
   - Masonry
   - MBProgressHUD
 
 SPEC CHECKSUMS:
-  JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
-  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: 56c29dac430bef359d49d52143739a4f5e06e634
+PODFILE CHECKSUM: b5fe5f44c7199bdf66104f097de62b5e369c5273
 
 COCOAPODS: 1.0.1
