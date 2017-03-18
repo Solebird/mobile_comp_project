@@ -20,6 +20,12 @@
     [super viewDidLoad];
     
     needInitPassword = false;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
+-(void)dismissKeyboard {
+    [self.view endEditing:YES];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -46,10 +52,22 @@
 }
 
 - (IBAction)onClickLogin:(id)sender {
-    if (needInitPassword)
-        [self performSegueWithIdentifier:@"init_password" sender:self];
-    else
-        [self performSegueWithIdentifier:@"friend_list" sender:self];
+    [[Global getInstance] showLoading:self.view];
+    NSDictionary *param = @{@"email":self.tfEmail.text,
+                            @"password":self.tfPassword.text};
+    [[Global getInstance] createDataTask:@"userLogin" withParam:param withCompletionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }else{
+            NSLog(@"ResponseObject: %@", responseObject);
+            NSDictionary *status = [responseObject objectForKey:@"status"];
+            if ([[status objectForKey:@"number"] intValue]==1)
+                [self performSegueWithIdentifier:@"init_password" sender:self];
+            else
+                [self performSegueWithIdentifier:@"friend_list" sender:self];
+        }
+        [[Global getInstance] hideLoading];
+    }];
 }
 
 @end

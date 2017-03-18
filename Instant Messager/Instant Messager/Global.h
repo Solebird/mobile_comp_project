@@ -15,7 +15,7 @@
 
 + (Global *) getInstance;
 
--(void)createDataTask:(NSString*)function withParam:(NSDictionary*)param;
+-(void)createDataTask:(NSString*)function withParam:(NSDictionary*)param withCompletionHandler:(void(^)(NSURLResponse *response, id responseObject, NSError *error))handler;
 
 -(void)connectionRequest:(NSString*)action inputData:(NSDictionary*)params completion:(void(^)(NSData *data, NSURLResponse *response,NSError *error))handler;
 -(void)extractData:(NSData*)data to:(NSMutableDictionary*)output;

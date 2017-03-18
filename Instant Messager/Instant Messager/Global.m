@@ -18,7 +18,7 @@
     return _default;
 }
 
--(void)createDataTask:(NSString*)function withParam:(NSDictionary*)param{
+-(void)createDataTask:(NSString*)function withParam:(NSDictionary*)param withCompletionHandler:(void(^)(NSURLResponse *response, id responseObject, NSError *error))handler{
     NSString *urlStr = @"http://mobilecomp.sunnychan.a2hosted.com";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:param];
     [parameters setObject:function forKey:@"function"];
@@ -29,20 +29,23 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:urlStr parameters:parameters error:nil];
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-        }else{
-            //NSLog(@"Response: %@", response);
-            if (manager.responseSerializer == [AFHTTPResponseSerializer serializer]){
-                NSString *html = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                NSLog(@"HTML: %@",html);
-            }else{
-                NSLog(@"ResponseObject: %@", responseObject);
-            }
-        }
-    }];
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:handler];
     [dataTask resume];
+    
+//    --- Handler Example ---
+//    ^(NSURLResponse *response, id responseObject, NSError *error) {
+//        if (error) {
+//            NSLog(@"Error: %@", error);
+//        }else{
+//            //NSLog(@"Response: %@", response);
+//            if (manager.responseSerializer == [AFHTTPResponseSerializer serializer]){
+//                NSString *html = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+//                NSLog(@"HTML: %@",html);
+//            }else{
+//                NSLog(@"ResponseObject: %@", responseObject);
+//            }
+//        }
+//    }
 }
 
 // This is old method.
@@ -81,7 +84,6 @@
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:handler];
     [postDataTask resume];
 }
-
 -(void)extractData:(NSData*)data to:(NSMutableDictionary*)output{
     if (data!=nil) {
         NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
