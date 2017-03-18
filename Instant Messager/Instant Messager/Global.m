@@ -18,6 +18,35 @@
     return _default;
 }
 
+-(void)createDataTask:(NSString*)action withParam:(NSDictionary*)param{
+    NSString *urlStr = [NSString stringWithFormat:@"http://thomascheung.net/test.php"];
+    NSDictionary *parameters = @{@"function": action,
+                                 @"email": @"bar",
+                                 @"username": @"test",
+                                 @"password": @"123"};
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:urlStr parameters:parameters error:nil];
+    
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"Response: %@", response);
+            NSLog(@"ResponseObject: %@", responseObject);
+            if (manager.responseSerializer == [AFHTTPResponseSerializer serializer]){
+                NSString *html = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                NSLog(@"HTML: %@",html);
+            }
+        }
+    }];
+    [dataTask resume];
+}
+
 -(void)connectionRequest:(NSString*)action inputData:(NSDictionary*)params completion:(void(^)(NSData *data, NSURLResponse *response,NSError *error))handler{
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",action]];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];

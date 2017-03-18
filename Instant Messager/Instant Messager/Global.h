@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "MBProgressHUD.h"
+#import "AFNetworking/AFNetworking.h"
 
 @interface Global : NSObject
 
 + (Global *) getInstance;
+
+-(void)createDataTask:(NSString*)action withParam:(NSDictionary*)param;
 
 -(void)connectionRequest:(NSString*)action inputData:(NSDictionary*)params completion:(void(^)(NSData *data, NSURLResponse *response,NSError *error))handler;
 -(void)extractData:(NSData*)data to:(NSMutableDictionary*)output;
