@@ -1,15 +1,10 @@
-//
-//  UserGlobal.h
-//  ShopDaily
-//
-//  Created by Thomas Cheung on 18/7/2016.
-//  Copyright © 2016 Thomas Cheung. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "MBProgressHUD.h"
 #import "AFNetworking/AFNetworking.h"
+#import "User.h"
+#import "TCTable.h"
+
 
 @interface Global : NSObject
 

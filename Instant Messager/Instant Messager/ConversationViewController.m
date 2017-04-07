@@ -13,7 +13,6 @@
 @end
 
 @implementation ConversationViewController{
-    TCTable *messages;
     float keyboardHeight;
 }
 
@@ -56,15 +55,7 @@
     [[Global getInstance] setCircleImage:self.imgIcon];
     
     [self.lbName setText:self.name];
-    
-    messages = [TCTable new];
-    
-    //demo data
-    [messages addRecord:@"id",@"hello",@"1",nil];
-    [messages addRecord:@"id",@"hi!!",@"0",nil];
-    [messages addRecord:@"id",@"Nice to meet you!",@"1",nil];
-    [messages addRecord:@"id",@"Hehe",@"1",nil];
-    [messages addRecord:@"id",@"Me too! hehe..",@"0",nil];
+
     
     [self.tableView reloadData];
 }
@@ -74,7 +65,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [messages count];
+    return 0;//[messages count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -82,13 +73,13 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier;
-    if ([[messages getObject:2 fromRow:indexPath.row] isEqualToString:@"1"])
+    if ([@"1" isEqualToString:@"1"])
         cellIdentifier = @"send";
     else
         cellIdentifier = @"receive";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    NSString *str = [NSString stringWithFormat:@"  %@  ",[messages getObject:1 fromRow:indexPath.row]];
+    NSString *str = [NSString stringWithFormat:@"  %@  ",@"message"];
     
     UILabel *msg = [cell viewWithTag:1];
     [msg setText:str];
@@ -96,7 +87,7 @@
     [msg.layer setCornerRadius:5.0];
     [msg.layer setBorderWidth:1.0];
     [msg.layer setBorderColor:[UIColor blackColor].CGColor];
-    if ([[messages getObject:2 fromRow:indexPath.row] isEqualToString:@"1"])
+    if ([@"1" isEqualToString:@"1"])
         [msg setBackgroundColor:[UIColor lightGrayColor]];
     
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -114,7 +105,6 @@
 - (IBAction)onClickSend:(id)sender {
     NSString *str = self.tfInput.text;
     [self.tfInput setText:@""];
-    [messages addRecord:@"id", str, @"1", nil];
     [self.tableView reloadData];
     [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height)];
 }

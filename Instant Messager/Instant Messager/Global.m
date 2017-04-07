@@ -1,11 +1,3 @@
-//
-//  UserGlobal.m
-//  ShopDaily
-//
-//  Created by Thomas Cheung on 18/7/2016.
-//  Copyright © 2016 Thomas Cheung. All rights reserved.
-//
-
 #import "Global.h"
 
 @implementation Global

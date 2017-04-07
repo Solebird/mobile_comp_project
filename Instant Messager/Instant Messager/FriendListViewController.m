@@ -15,6 +15,7 @@
 
 @implementation FriendListViewController{
     NSMutableArray *friendList;
+    TCTable *friends;
     
     int swipeFlag;
     
@@ -72,17 +73,29 @@
 }
 
 -(void)initFriendList{
-    friendList = [NSMutableArray array];
+    [[Global getInstance] showLoading:self.view];
+    NSDictionary *param = @{@"userID":[User getInstance].userId};
+    [[Global getInstance] createDataTask:@"showAllFriend" withParam:param withCompletionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }else{
+            NSLog(@"ResponseObject: %@", responseObject);
+            NSDictionary *status = [responseObject objectForKey:@"status"];
+            if ([[status objectForKey:@"number"] intValue]==0){
+                NSArray *data = [responseObject objectForKey:@"data"];
+                friends = [TCTable new];
+                for (NSDictionary *friend in data) {
+                    [friends addRecord:[friend objectForKey:@"userID"],[friend objectForKey:@"username"],[friend objectForKey:@"icon"],[friend objectForKey:@"passwordLock"],nil];
+                }
+                [friends printArray];
+                [self.tableView reloadData];
+            }else{
+                [[Global getInstance] showOkAlertBox:[status objectForKey:@"message"] inVC:self];
+            }
+        }
+        [[Global getInstance] hideLoading];
+    }];
     
-    //demo data
-    TCTable *friends = [TCTable new];
-    [friends addRecord:@"0", @"secure_chat", @"Amy", @"1", nil];
-    [friends addRecord:@"1", @"icon", @"Bobby", @"0", nil];
-    [friends addRecord:@"2", @"icon", @"Cat", @"0", nil];
-    [friends addRecord:@"3", @"icon", @"Daddy", @"0", nil];
-    [friendList addObject:friends];
-    
-    [self.tableView reloadData];
 }
 
 
@@ -101,7 +114,7 @@
     [alert addAction:[UIAlertAction actionWithTitle:@"Create" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         NSString *title = alert.textFields[0].text;
         if (![title isEqualToString:@""]){
-            [friendList addObject:[TCTable new]];
+//            [friendList addObject:[TCTable new]];
             [self.segmentControl insertSegmentWithTitle:title atIndex:index animated:YES];
             [self.segmentControl setSelectedSegmentIndex:index];
             [self.swipeView reloadData];
@@ -168,19 +181,19 @@
 
 //TableView --------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [(TCTable*)[friendList objectAtIndex:self.segmentControl.selectedSegmentIndex] count];
+    return [friends count];//[(TCTable*)[friendList objectAtIndex:self.segmentControl.selectedSegmentIndex] count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
-    TCTable *friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
+//    TCTable *friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
     
     UIImageView *img = [cell viewWithTag:1];
-    [img setImage:[UIImage imageNamed:[friends getObject:1 fromRow:indexPath.row]]];
+    [img setImage:[UIImage imageNamed:[friends getObject:2 fromRow:indexPath.row]]];
     [img setBackgroundColor:[UIColor whiteColor]];
     [[Global getInstance] setCircleImage:img];
     
     UILabel *name = [cell viewWithTag:2];
-    [name setText:[friends getObject:2 fromRow:indexPath.row]];
+    [name setText:[friends getObject:1 fromRow:indexPath.row]];
     
     UIImageView *lock = [cell viewWithTag:3];
     if ([[friends getObject:3 fromRow:indexPath.row] isEqualToString:@"1"])
@@ -239,12 +252,12 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)index {
     if (index != 0){
         NSLog(@"Clicked Group: %ld",index);
-        TCTable *current_friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
-        TCTable *target_friends = [friendList objectAtIndex:index];
-        for (NSIndexPath *indexPath in highlightedIndexPath) {
-            [target_friends addEntireRecord:[current_friends getRecord:indexPath.row]];
-        }
-        [friendList replaceObjectAtIndex:index withObject:target_friends];
+//        TCTable *current_friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
+//        TCTable *target_friends = [friendList objectAtIndex:index];
+//        for (NSIndexPath *indexPath in highlightedIndexPath) {
+//            [target_friends addEntireRecord:[current_friends getRecord:indexPath.row]];
+//        }
+//        [friendList replaceObjectAtIndex:index withObject:target_friends];
         
         [self closeOptionMenu];
     }else{ //Cancel do nothing
@@ -252,10 +265,10 @@
 }
 
 - (IBAction)onClickLockChat:(id)sender {
-    TCTable *friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
-    for (NSIndexPath *indexPath in highlightedIndexPath) {
-        [friends updateField:3 fromRow:(int)indexPath.row withObject:@"1"];
-    }
+//    TCTable *friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
+//    for (NSIndexPath *indexPath in highlightedIndexPath) {
+//        [friends updateField:3 fromRow:(int)indexPath.row withObject:@"1"];
+//    }
     UITableView *tableView = [self.swipeView.currentItemView viewWithTag:1];
     [tableView reloadData];
     [self closeOptionMenu];
@@ -272,12 +285,12 @@
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    TCTable *friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
-    if ([segue.identifier isEqualToString:@"conversation"]){
-        ConversationViewController *vc = [segue destinationViewController];
-        vc.icon = [friends getObject:1 fromRow:selectedIndex];
-        vc.name = [friends getObject:2 fromRow:selectedIndex];
-    }
+//    TCTable *friends = [friendList objectAtIndex:self.segmentControl.selectedSegmentIndex];
+//    if ([segue.identifier isEqualToString:@"conversation"]){
+//        ConversationViewController *vc = [segue destinationViewController];
+//        vc.icon = [friends getObject:1 fromRow:selectedIndex];
+//        vc.name = [friends getObject:2 fromRow:selectedIndex];
+//    }
 }
 
 @end

@@ -61,10 +61,21 @@
         }else{
             NSLog(@"ResponseObject: %@", responseObject);
             NSDictionary *status = [responseObject objectForKey:@"status"];
-            if ([[status objectForKey:@"number"] intValue]==1)
-                [self performSegueWithIdentifier:@"init_password" sender:self];
-            else
-                [self performSegueWithIdentifier:@"friend_list" sender:self];
+            if ([[status objectForKey:@"number"] intValue]==0){
+                NSDictionary *data = [responseObject objectForKey:@"data"];
+                [[User getInstance] setUserId:[data objectForKey:@"userID"]];
+                [[User getInstance] setUserName:[data objectForKey:@"username"]];
+                [[User getInstance] setUserEmail:[data objectForKey:@"email"]];
+                [[User getInstance] setUserIcon:[data objectForKey:@"icon"]];
+                [[User getInstance] setUserPwLock:[data objectForKey:@"passwordLock"]];
+                [[User getInstance] setFriendCount:[data objectForKey:@"friend_count"]];
+                if ([[data objectForKey:@"passwordLock"] intValue]==1)
+                    [self performSegueWithIdentifier:@"init_password" sender:self];
+                else
+                    [self performSegueWithIdentifier:@"friend_list" sender:self];
+            }else{
+                [[Global getInstance] showOkAlertBox:[status objectForKey:@"message"] inVC:self];
+            }
         }
         [[Global getInstance] hideLoading];
     }];

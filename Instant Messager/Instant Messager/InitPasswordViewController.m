@@ -38,7 +38,7 @@
         [self goToFake];
     }else{
         fakePassword = self.tfPassword.text;
-        [self goToFriendList];
+        [self setSecretPassword];
     }
 }
 -(void)goToFake{
@@ -62,6 +62,28 @@
             [self.tfPassword setAlpha:1];
             [self.btnEnter setAlpha:1];
         } completion:nil];
+    }];
+}
+
+-(void)setSecretPassword{
+    [[Global getInstance] showLoading:self.view];
+    NSDictionary *param = @{@"userID":[User getInstance].userId,
+                            @"realPW":realPassword,
+                            @"fakePW":fakePassword};
+    [[Global getInstance] createDataTask:@"setSecretPW" withParam:param withCompletionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }else{
+            NSLog(@"ResponseObject: %@", responseObject);
+            NSDictionary *status = [responseObject objectForKey:@"status"];
+            if ([[status objectForKey:@"number"] intValue]==0){
+//                [[Global getInstance] showOkAlertBox:[status objectForKey:@"message"] inVC:self];
+                [self goToFriendList];
+            }else{
+                [[Global getInstance] showOkAlertBox:[status objectForKey:@"message"] inVC:self];
+            }
+        }
+        [[Global getInstance] hideLoading];
     }];
 }
 

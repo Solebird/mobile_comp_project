@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TCTable.h"
 #import "Global.h"
 
 @interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>

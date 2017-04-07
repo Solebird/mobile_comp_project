@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TCTable.h"
 #import "SDSegmentedControl.h"
 #import "SwipeView.h"
 #import "Global.h"

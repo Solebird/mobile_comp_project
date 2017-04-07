@@ -5,7 +5,8 @@
 //  Created by Thomas Cheung on 11/3/2017.
 //
 //
-
+@import UIKit;
+@import Firebase;
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -15,8 +16,10 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    
+    //[FIRApp configure];
+    
     return YES;
 }
 
