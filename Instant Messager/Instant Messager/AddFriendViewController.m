@@ -13,35 +13,56 @@
 @end
 
 @implementation AddFriendViewController{
-    int friendCount;
+    TCTable *friends;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    friendCount = 0;
-    
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
 - (IBAction)onClickEnter:(id)sender {
-    friendCount++;
-    [self.tableView reloadData];
+    [[Global getInstance] showLoading:self.view];
+    NSDictionary *param = @{@"nameString":self.tfUsername.text};
+    [[Global getInstance] createDataTask:@"searchFriend" withParam:param withCompletionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }else{
+            NSLog(@"ResponseObject: %@", responseObject);
+            NSDictionary *status = [responseObject objectForKey:@"status"];
+            if ([[status objectForKey:@"number"] intValue]==0){
+                NSArray *data = [responseObject objectForKey:@"data"];
+                friends = [TCTable new];
+                for (NSDictionary *friend in data) {
+                    [friends addRecord:[friend objectForKey:@"userID"],[friend objectForKey:@"username"],[friend objectForKey:@"icon"],nil];
+                }
+                [friends printArray];
+                [self.tableView reloadData];
+            }else{
+                [[Global getInstance] showOkAlertBox:[status objectForKey:@"message"] inVC:self];
+            }
+        }
+        [[Global getInstance] hideLoading];
+    }];
 }
 - (IBAction)onClickBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return friendCount;
+    return [friends count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     UIImageView *img = [cell viewWithTag:1];
-    [img setImage:[UIImage imageNamed:@"secure_chat"]];
+    [img setImage:[UIImage imageNamed:[NSString stringWithFormat:@"icon%@.jpg",[friends getObject:2 fromRow:indexPath.row]]]];
+    [img setContentMode:UIViewContentModeScaleAspectFill];
+    [[Global getInstance] setCircleImage:img];
+    
     UILabel *name = [cell viewWithTag:2];
-    [name setText:[NSString stringWithFormat:@"Friend %d",(int)indexPath.row]];
+    [name setText:[friends getObject:1 fromRow:indexPath.row]];
     
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
